@@ -31,6 +31,32 @@ func main() {
 	fmt.Printf("floats\n"+
 		"with decimal point: \t%f\n"+
 		"with exponent set:  \t%e\n"+
-		"with hexadecimal:   \t%E",
+		"with hexadecimal:   \t%E\n",
 		withDecimalPoint, withExponent, withHexadec)
+
+	var (
+		a        rune = 'a'
+		aOctal   rune = '\141'
+		aHexadec rune = '\x61'
+		a16Hexa  rune = '\u0061'
+		a32Hexa  rune = '\U00000061'
+	)
+
+	fmt.Printf("runes\n"+
+		"character:   \t%c\n"+
+		"octal:       \t%c\n"+
+		"hexadecimal: \t%c\n"+
+		"16-bit hex:  \t%c\n"+
+		"32-bit hex:  \t%c\n",
+		a, aOctal, aHexadec, a16Hexa, a32Hexa,
+	)
+
+	var (
+		doubleQuotedString string = "Hello,(\t <tab here>) I'm a string\n"
+		rawString          string = `Hello!
+I'm a string \t <- it's not a tab anymore.
+`
+	)
+
+	fmt.Println("strings\n", doubleQuotedString, rawString)
 }

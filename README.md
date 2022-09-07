@@ -213,8 +213,6 @@ be set to 0.
 
 #### Literals
 
-
-
 ##### Integer number
 
 Integers can be set as a base ten, or other via prefixes: 
@@ -235,8 +233,17 @@ Underscore symbol can be used for better representation.
 
 ##### Rune
 
+This type of literals represent character and surrounded within single quotes 
+`'`. Like so: `'a'`.
 
+Run can be written as an unicode character, 8-bit octal, 8-bit hexadecimal, 
+16-bit hexadecimal, or 32-bit unicode number. Also with rune can be defined one 
+of a special character.
 
 ##### String
 
+String literal can be given withing double quotes `"` around it, or within 
+backtick, as a so called raw string. The difference is that string in double 
+quotes some of a symbol sequence will be interpreted as non-printable 
+characters. 
 
