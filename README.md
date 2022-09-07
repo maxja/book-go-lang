@@ -75,11 +75,11 @@ setx GOPATH %...
 setx path "%path%;%GOPATH\bin"
 ```
 
-### The go Command
+#### The go Command
 
 Go ships with compiler, formatter, linter, dependency manager, test runner, etc.
 
-#### Run and Build
+##### Run and Build
 
 Code can be run or can be build. Run will compile, run, and wipe build 
 artefact on termination.
@@ -99,7 +99,7 @@ $ go build ./exmpl_hello.go
 $ go build -o hello_world ./exmpl_hello.go
 ```
 
-#### Getting 3rd-Party Go Tools
+##### Getting 3rd-Party Go Tools
 
 In Go world there are no centrally hosted package registry, but rather it uses 
 source code repository as a reference point for the package.
@@ -120,7 +120,7 @@ variable might be used to account those changes.
 
 Author suggest to install `hey` utility to try `go install`.
 
-#### Formatting Your Code
+##### Formatting Your Code
 
 In go world there is no formatting variation, and language authors doesn't left 
 any space for dispute about it.
@@ -142,7 +142,7 @@ $ goimports -l -w .
 semicolon at the end of each command, go lexer will virtually inserts them 
 after certain tokens.
 
-#### Linting and Vetting
+##### Linting and Vetting
 
 Author suggest to read [Effective Go](https://go.dev/doc/effective_go) article 
 as well as [Code Review Comments](https://github.com/golang/go/wiki/CodeReviewComments) 
@@ -191,4 +191,17 @@ Example of Makefile can be found in `./ch01/Makefile`.
 #### Staying Up to Date
 
 Be cautious while switching between different version of go tools.
+
+### Chapter 2. Primitive Types and Declarations
+
+#### Build-in Types
+
+> `./ch02/exmpl_buildin.go` contains build in types. And by running this 
+program, variables will be declared, initialized with type-related zero values 
+and printed.
+
+A [list of go types](https://pkg.go.dev/builtin#pkg-types) could be found in 
+original documentation.
+
+
 
