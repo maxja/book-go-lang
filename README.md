@@ -213,6 +213,8 @@ be set to 0.
 
 #### Literals
 
+Literals ≠ variables.
+
 ##### Integer number
 
 Integers can be set as a base ten, or other via prefixes: 
