@@ -198,10 +198,45 @@ Be cautious while switching between different version of go tools.
 
 > `./ch02/exmpl_buildin.go` contains build in types. And by running this 
 program, variables will be declared, initialized with type-related zero values 
-and printed.
+and are printed.
 
 A [list of go types](https://pkg.go.dev/builtin#pkg-types) could be found in 
 original documentation.
 
+#### The Zero Value
+
+Go compiler will initialize uninitialized variables with zero values regarding 
+declared types. 
+
+So that variable of `string` type will be empty string, or `int` variable will 
+be set to 0.
+
+#### Literals
+
+
+
+##### Integer number
+
+Integers can be set as a base ten, or other via prefixes: 
+* binary `0b`, 
+* octal `0o` (`0`),
+* hexadecimal `0x`.
+
+Author do not recommend to use `0` prefix, as it might confused other developers.
+
+Underscore symbol can be used for better representation.
+
+##### Floating point
+
+Literals with floating point can be defined as a set on numbers with stop 
+delimiter, in exponential form or even in hexadecimal.
+
+Underscore symbol can be used for better representation.
+
+##### Rune
+
+
+
+##### String
 
 
