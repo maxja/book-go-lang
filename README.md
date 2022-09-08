@@ -293,5 +293,10 @@ Strings consists of runes and are comparable but immutable. Despite that `rune`
 is an alias on `int32` and `byte` is an alias to `uint8` author suggest to 
 preserve clarity in the code and use appropriate type when it needs to be used.
 
+#### Explicit Type Conversion
 
+Unlike literals, that can be promoted to a certain type, values of a variable 
+needs to be converted manually.
+
+This means that, 0 is zero and nothing more, not `false` by any means.
 
