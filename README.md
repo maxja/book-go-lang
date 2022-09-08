@@ -287,5 +287,11 @@ it was zero.
 
 There is another subcategory of numbers called complex.
 
+#### Runes and Strings
+
+Strings consists of runes and are comparable but immutable. Despite that `rune` 
+is an alias on `int32` and `byte` is an alias to `uint8` author suggest to 
+preserve clarity in the code and use appropriate type when it needs to be used.
+
 
 
