@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"math"
 )
 
 func main() {
@@ -93,4 +94,7 @@ complex128 is a complex number with 64 bit floating part: %#v
 	fmt.Printf("%-12s: %-32d | %-32d\n", "int32", minInt32, maxInt32)
 	fmt.Printf("%-12s: %-32d | %-32d\n", "uint64", minUint64, maxUint64)
 	fmt.Printf("%-12s: %-32d | %-32d\n", "int64", minInt64, maxInt64)
+
+	fmt.Printf("%-12s: %-.26e | %-.26e\n", "float32", math.SmallestNonzeroFloat32, math.MaxFloat32)
+	fmt.Printf("%-12s: %-.25e | %-.25e\n", "float64", math.SmallestNonzeroFloat64, math.MaxFloat64)
 }
