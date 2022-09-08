@@ -274,6 +274,18 @@ Integers can be compared, and bit-manipulated.
 Go have 2 types to represent a number with floating point: `float32` and 
 `float64` by [IEEE 754](https://en.wikipedia.org/wiki/IEEE_754) specification.
 
+Author suggest to use number with float points less, or at least use 64 bit 
+version of it due to higher precision. And do not compare directly, but use 
+comparison with epsilon.
+
+Almost every arithmetic operations can be used with float except modulo 
+division.
+
+Division by zero in float world have caveats, it would not raise panic, as 
+integer would, but will return `±Inf` if dividend was nonzero, and `None` if 
+it was zero.
+
+There is another subcategory of numbers called complex.
 
 
 
