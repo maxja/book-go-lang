@@ -254,10 +254,26 @@ characters.
 
 #### Booleans
 
-true / false, nothing fancy.
+true / false, nothing fancy. Uninitialized boolean variable gets `false` on 
+compile time.
 
 #### Numeric Types
 
 Go have 12 different types of numeric grouped into 3 category. 
+
+Author suggest to use `int`, `uint`, and `float64` unless algorithm dictates 
+other.
+
+Math operations can be done with integers, unless type boundaries wouldn't be 
+exceeded, or it wouldn't be division by zero.
+
+Arithmetic operations can be combined with assignment.
+
+Integers can be compared, and bit-manipulated.
+
+Go have 2 types to represent a number with floating point: `float32` and 
+`float64` by [IEEE 754](https://en.wikipedia.org/wiki/IEEE_754) specification.
+
+
 
 
