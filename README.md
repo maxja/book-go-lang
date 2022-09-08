@@ -215,6 +215,9 @@ be set to 0.
 
 Literals ≠ variables.
 
+> `./ch02/exmpl_literals.go` contains corresponding codes examples of a 
+literals.
+
 ##### Integer number
 
 Integers can be set as a base ten, or other via prefixes: 
@@ -248,4 +251,13 @@ String literal can be given withing double quotes `"` around it, or within
 backtick, as a so called raw string. The difference is that string in double 
 quotes some of a symbol sequence will be interpreted as non-printable 
 characters. 
+
+#### Booleans
+
+true / false, nothing fancy.
+
+#### Numeric Types
+
+Go have 12 different types of numeric grouped into 3 category. 
+
 
