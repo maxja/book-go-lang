@@ -300,3 +300,67 @@ needs to be converted manually.
 
 This means that, 0 is zero and nothing more, not `false` by any means.
 
+#### var / :=
+
+Variable in Go can be declared via `var` keyword or `:=` operator. There's a 
+reason for that diversity, -- the context.
+
+`var` is an only way to declare variable outside function scope, and `:=` only 
+works only within function scope.
+
+With `var` keyword you can declare variable and define type for it, but omit 
+the value of initialization, compiler will set type-regarding zero value.
+
+`:=` force you to specify variable with value.
+
+In both cases, type definition might be omitted while value is present, and 
+type for this variables will be defined by value.
+
+In both cases, several variables can be initialized within a series of values, 
+given on the right side of operation, both series should be presented as 
+coma-separated lists.
+
+`var` allowed to define a scope of variables, enumerated in a parentheses.
+
+> `./ch02/exmpl_varassignment.go` contains those variations.
+
+Variables declared outside function scope is not a good idea! Use `cont` 
+instead.
+
+Go heavily relies on naming convention, where variables, constants, types, and 
+other package level entities expose to outer wold if they starts with Upper 
+case letter.
+
+Defined variable cant be reassigned with value of different type.
+
+#### const
+
+Pretty much the same as `var` declaration rules applied, but constant **must**
+be initialized right away. Needles to say, that defined `constants` are 
+immutable.
+
+Acceptable by constant types are limited to numeric literals, boolean, runes, 
+strings and some built-in functions and expressions.
+
+Basically with `const` keyword program will label literal with given name.
+
+In addition to that, if type directed in `const` declaration, then it cannot be 
+use as a value to the variable of other type.
+
+> Go force you to use declared variable, and count references on them in 
+compile type. It would not compile otherwise.
+
+#### Naming Variables and Constants
+
+Name can contains any unicode compatible symbols. But be aware of using rare 
+symbols or once that look alike others, it will misguide others.
+
+CamelCase notation is suggested to be used, and as it was mentioned 1st letter 
+defines visibility.
+
+Go authors do not suggest to use type prefixes of any kind.
+
+And more exposed names should be more meaningful.
+
+### Chapter 3. Composite Types
+
