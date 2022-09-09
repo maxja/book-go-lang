@@ -368,8 +368,25 @@ And more exposed names should be more meaningful.
 
 #### Arrays -- Too Rigid to Use Directly 
 
-Author said that arrays are rarely used directly, because of their nature. They 
-are predefined on declaration stage and ...
+Author said, that arrays are rarely used directly, because of their nature. 
+They declared with predefined size `[3]int`, and size is a part of type.
+
+Type of array's element must be a part of declaration.
+
+Array variable can be left uninitialized, and compiler will set type defined 
+zero values to all it's elements.
+
+Array can be declared via given initialization value `[3]int{1,2,3}`.
+
+Initialization values set can have indexes `[10]int{9:10}`, so that value will 
+take certain place in upcoming array.
+
+Size of array can be calculated from within initialization values set, for that 
+use `[...]int{1,2,3}` instead of certain number of an elements.
+
+Arrays are comparable via `==` and `!=`.
+
+
 
 #### Slices
 
