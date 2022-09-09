@@ -386,17 +386,65 @@ use `[...]int{1,2,3}` instead of certain number of an elements.
 
 Arrays are comparable via `==` and `!=`.
 
+Arrays in Go are one-dimensional, but can be nested `[5][5]int`, and might be 
+initialized like so: `[3][2]int{[2]int{1, 2}, [2]int{3, 4}, [2]int{5, 6}}`.
 
+Array elements can be referenced via index, that starts with 0, and they can be 
+re-assigned.
+
+Arrays are not extendible, so it can't be appended, and it's elements can't be 
+referenced out of setted boundaries, it will raise _panic_.
+
+`len` is a builtin function, that can be applied to return length of specified 
+array.
+
+Array is a backing store for _slices_.
 
 #### Slices
 
-Author suggest to use slices instead of arrays, in most of the cases.
+Author suggest to use slices rather than arrays.
+
+Slices can grow, and they grow twice each time, when reach their capacity, 
+until reaches 1024 elements, then grow rate decrease to quarter.
+
+Unlike arrays, slice are better as an function arguments, because of the lack 
+of size limitation.
+
+To declare slices use empty square braces `[]` unlike array, where number of 
+elements `[5]` or variadic operator `[...]` required to put into.
+
+Multidimensional slices can be declared same way as arrays.
+
+Unlike array, slices can't be comparable to each other, but they can be compared 
+with `nil`, and if array equal `nil`, then array was uninitialized.
+And the length of such array will be 0.
+
+`len` function can be used.
 
 ##### len
 
+`len` one of builtin function that overloaded and can be used within several 
+types.
+
 ##### append
 
+`append` function another builtin function that allows slice to grow in size. 
+It's a pure function, that accepts 2 or more arguments, where the first one is 
+a slice and the rest are values required to fit in this slice, and returns 
+result of operation.
+
+```
+x = append(x, 1, 2, 3, 4)
+```
+
+Two or more slices can be merged by applying `append` with variadic operation:
+```
+x = append(x, y...)
+```
+
 ##### cap
+
+
 
 ##### make
 
