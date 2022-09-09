@@ -364,3 +364,22 @@ And more exposed names should be more meaningful.
 
 ### Chapter 3. Composite Types
 
+`Array`, `slice`, `map`, `struct` and other are complex types.
+
+#### Arrays -- Too Rigid to Use Directly 
+
+Author said that arrays are rarely used directly, because of their nature. They 
+are predefined on declaration stage and ...
+
+#### Slices
+
+Author suggest to use slices instead of arrays, in most of the cases.
+
+##### len
+
+##### append
+
+##### cap
+
+##### make
+
