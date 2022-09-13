@@ -1,7 +1,7 @@
 Learning Go
 ===
 
-Follow up and code examples/exercises from
+Follow up notes and code examples/exercises from
 Book by Jon Bodner
 
 Abstract
@@ -430,8 +430,8 @@ types.
 
 `append` function another builtin function that allows slice to grow in size. 
 It's a pure function, that accepts 2 or more arguments, where the first one is 
-a slice and the rest are values required to fit in this slice, and returns 
-result of operation.
+a slice and the rest are a new appendable elements, and it returns a result of 
+the operation.
 
 ```
 x = append(x, 1, 2, 3, 4)
@@ -442,9 +442,27 @@ Two or more slices can be merged by applying `append` with variadic operation:
 x = append(x, y...)
 ```
 
+We certainly can do prepend, just by reverse which to append.
+
 ##### cap
 
+Capacity is another measurement of a slice. It's number of a preallocated 
+elements, or consecutive locations in memory.
 
+Each time new element(-s) added, it might exhaust allocated capacity 
+`(len == cap)`, and if no space left, Go runtime will allocate new consecutive 
+memory portion, twice a size (unless it reaches 1024, - then it will grow only 
+a quoter), and will copy all data from previous slice memory to newly created.
+
+> Go runtime isn't separate VM that needs to be installed, but it's a part of 
+future executable that included in compile time, regarding application 
+requirements.
+
+> Any new slice allocation and copying - it's a time consuming operation.
+
+> `cap` can be applied on `array` but it will present it's length.
+
+> Check how slice grows over append iteration in `./ch03/exmpl_capacity.go`
 
 ##### make
 

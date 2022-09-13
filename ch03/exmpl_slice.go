@@ -4,10 +4,10 @@ import "fmt"
 
 func main() {
 	var sliceButNotArray = []int{1, 2, 3}
-	fmt.Printf("slice can be declared and inititalized almost exactly like array, except size should be omited []int{1,2,3}: %#v\n", sliceButNotArray)
+	fmt.Printf("slice can be declared and initialized almost exactly like array, except size should be omitted []int{1,2,3}: %#v\n", sliceButNotArray)
 
 	var spacedSlice = []int{5: 4, 6, 10: 100}
-	fmt.Printf("slice can be intitlized spaced by declaring indexes for values, []int{5:4, 6, 10:100}: %#v\n", spacedSlice)
+	fmt.Printf("slice can be initialized spaced by declaring indexes for values, []int{5:4, 6, 10:100}: %#v\n", spacedSlice)
 
 	var multidimensionalSlice [][]int
 	fmt.Printf("slice can be nested with other slices [][]int: %#v\n", multidimensionalSlice)
@@ -34,4 +34,8 @@ func main() {
 	y := []int{100, 200, 300}
 	x = append(x, y...)
 	fmt.Printf("go have variadic operator, that can help to combine two or more slices together, y := []int{100, 200, 300}; x = append(x, y...): %#v\n", x)
+
+	z := []int{1, 2, 3}
+	y = append(z, y...)
+	fmt.Printf("which to append isn't important, isn't important, z := []int{1, 2, 3}, y := []int{100, 200, 300}; y = append(z, y...): %#v, and we've got prepend\n", y)
 }
