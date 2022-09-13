@@ -476,3 +476,20 @@ length, and `append` will _add_ new elements after them.
 
 > Check how make can be used on slices in `./ch03/exmpl_make.go`
 
+##### Slicing Slices
+
+Basically it's offsetting via numbers in square braces `[start:end:limit]`. 
+Unlike **python**, negative or overflown indexes can't be used, and in Go 
+there is a third slicing value, but it's not a step, but a limit of capacity.
+
+Slicing wouldn't create a copy of data, but it will reference original one. 
+So by changing value by index in one one slice, all it's related slices will be 
+changed as well.
+
+> Be cautious mixing slicing and appending new elements, it might end up with 
+chaotic result.
+
+Array can be sliced as well, and this way converted to a slice.
+
+##### copy
+
