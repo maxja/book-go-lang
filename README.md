@@ -466,3 +466,13 @@ requirements.
 
 ##### make
 
+`make` is another builtin function, that helps to declare and initialize slices 
+when a length or a capacity can be specified.
+
+> Function descriptor `make(type, length, capacity)`
+
+> In case length presented slice will be initialized with zero values of this 
+length, and `append` will _add_ new elements after them.
+
+> Check how make can be used on slices in `./ch03/exmpl_make.go`
+
